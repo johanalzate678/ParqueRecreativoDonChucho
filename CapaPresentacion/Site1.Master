@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TuProyecto.Site" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <title>Tienda de Diversión</title>
+    <meta charset="utf-8" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Encabezado -->
+        <div class="header">
+            <h1>🎡 Bienvenido a  Parque Recreativo Don Chucho</h1>
+        </div>
+
+        <!-- Menú -->
+        <div class="menu">
+            <asp:Menu ID="MenuPrincipal" runat="server" Orientation="Horizontal" 
+                      StaticDisplayLevels="1" CssClass="menuItems">
+                <Items>
+                    <asp:MenuItem Text="Juegos" NavigateUrl="~/Juegos.aspx" />
+                    <asp:MenuItem Text="Atracción" NavigateUrl="~/Atraccion.aspx" />
+                    <asp:MenuItem Text="Sesión" NavigateUrl="~/Sesion.aspx" />
+                </Items>
+            </asp:Menu>
+        </div>
+
+        <!-- Contenido dinámico -->
+        <main>
+        <div class="mainContent">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+            </main>
+
+        <!-- Pie de página -->
+        <div class="footer">
+            <p>© 2025 Tienda de Diversión - Todos los derechos reservados</p>
+        </div>
+    </form>
+</body>
+</html>
+

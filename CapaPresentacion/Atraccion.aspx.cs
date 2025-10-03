@@ -29,14 +29,7 @@ namespace CapaPresentacion
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btnBuscarAtraccion_Click(object sender)
-        {
-            int id = int.Parse(txtBuscarAtraccion.Text);
-            dgvBuscarAtraccion.DataSource = atraccion.buscar(id);
-            dgvBuscarAtraccion.DataBind();
+            atraccion.Actualizar(int.Parse(txtCodigoAtraccion.Text), txtNombreAtraccion.Text, int.Parse(txtPrecioEntrada.Text), txtCapacidadMaxima.Text);
         }
 
         protected void btnBuscarAtraccion_Click1(object sender, EventArgs e)

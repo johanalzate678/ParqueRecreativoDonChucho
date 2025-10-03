@@ -1,41 +1,34 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TuProyecto.Site" %>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head runat="server">
-    <title>Tienda de Diversión</title>
     <meta charset="utf-8" />
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link href="~/css/stilos.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Encabezado -->
-        <div class="header">
-            <h1>🎡 Bienvenido a  Parque Recreativo Don Chucho</h1>
-        </div>
+        <div class="layout">
+            <!-- Menú vertical -->
+            <nav class="vertical-menu">
+                <div class="logo">
+                    <h2>Tienda Don Chucho</h2>
+                </div>
+                <ul>
+                    <li><a runat="server" href="~/Default.aspx">Inicio</a></li>
+                     <li><a runat="server" href="~/Juego.aspx">Juego</a></li>
+                    <li><a runat="server" href="~/Atraccion.aspx">Atraccion</a></li>
+                    <li><a runat="server" href="~/Sesion.aspx">Sesion</a></li>
+                    <!-- Agrega más enlaces si los necesitas -->
+                </ul>
+            </nav>
 
-        <!-- Menú -->
-        <div class="menu">
-            <asp:Menu ID="MenuPrincipal" runat="server" Orientation="Horizontal" 
-                      StaticDisplayLevels="1" CssClass="menuItems">
-                <Items>
-                    <asp:MenuItem Text="Juegos" NavigateUrl="~/Juegos.aspx" />
-                    <asp:MenuItem Text="Atracción" NavigateUrl="~/Atraccion.aspx" />
-                    <asp:MenuItem Text="Sesión" NavigateUrl="~/Sesion.aspx" />
-                </Items>
-            </asp:Menu>
-        </div>
-
-        <!-- Contenido dinámico -->
-        <main>
-        <div class="mainContent">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-        </div>
+            <!-- Contenido principal -->
+            <main class="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </main>
-
-        <!-- Pie de página -->
-        <div class="footer">
-            <p>© 2025 Tienda de Diversión - Todos los derechos reservados</p>
         </div>
     </form>
 </body>

@@ -1,124 +1,80 @@
-﻿/* ---------- Estilos Generales ---------- */
+﻿* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    background: #f4f7f6;
+    color: #152d21;
 }
 
-/* ---------- Encabezado ---------- */
-.header {
-    width: 100%;
-    background: linear-gradient(90deg, #2c3e50, #34495e);
-    color: #fff;
-    padding: 25px 0;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+.layout {
+    display: flex;
+    min-height: 100vh;
 }
 
-    .header h1 {
-        margin: 0;
-        font-size: 28px;
-        letter-spacing: 1px;
+/* Menú vertical */
+.vertical-menu {
+    width: 240px;
+    /*background: linear-gradient(180deg,#0f6b3f,#054a2b);*/
+    background: linear-gradient(180deg, #2c3e50, #1a237e);
+    color: white;
+    padding: 20px;
+}
+
+    .vertical-menu .logo {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
-/* ---------- Menú ---------- */
-.menu {
-    background-color: #34495e;
-    padding: 12px;
-    text-align: center;
-}
+    .vertical-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.menuItems {
-    font-size: 16px;
-    color: white;
-}
+    .vertical-menu li {
+        margin: 12px 0;
+    }
 
-    .menuItems a {
+    .vertical-menu a {
         color: white;
         text-decoration: none;
-        padding: 10px 18px;
-        display: inline-block;
-        transition: all 0.3s ease;
-        border-radius: 5px;
+        font-weight: 600;
+        display: block;
+        padding: 8px;
+        border-radius: 6px;
     }
 
-        .menuItems a:hover {
-            background-color: #1abc9c;
-            transform: scale(1.05);
+        .vertical-menu a:hover {
+            background: rgba(255,255,255,0.15);
         }
 
-/* ---------- Contenido ---------- */
-.mainContent {
-    padding: 30px;
-    min-height: 500px;
-    background-color: #fff;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+/* Contenido */
+.content {
+    flex: 1;
+    padding: 24px;
+    background: white;
 }
 
-/* ---------- Botones generales ---------- */
-button, .btn {
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    font-size: 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-    button:hover, .btn:hover {
-        background-color: #16a085;
+/* Responsive */
+@media (max-width:800px) {
+    .layout {
+        flex-direction: column;
     }
 
-/* ---------- Inputs ---------- */
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 6px 0 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-    transition: border 0.3s ease;
-}
-
-    input:focus, select:focus, textarea:focus {
-        border: 1px solid #1abc9c;
-        outline: none;
+    .vertical-menu {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
     }
 
-/* ---------- Tablas ---------- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
+        .vertical-menu ul {
+            display: flex;
+        }
 
-    table th, table td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: center;
-    }
-
-    table th {
-        background-color: #1abc9c;
-        color: white;
-    }
-
-/* ---------- Pie de página ---------- */
-.footer {
-    width: 100%;
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+        .vertical-menu li {
+            margin: 0 12px;
+        }
 }

@@ -36,7 +36,7 @@
         <h3>Listado de Sesiones</h3>
         <asp:GridView ID="gvSesiones" runat="server" AutoGenerateColumns="False" CssClass="table" GridLines="None" CellPadding="10">
             <Columns>
-                <asp:BoundField DataField="IdSesion" HeaderText="ID Sesión" />
+                
                 <asp:BoundField DataField="CodigoAtraccion" HeaderText="Código Atracción" />
                 <asp:BoundField DataField="CodigoJuego" HeaderText="Código Juego" />
                 <asp:BoundField DataField="NumeroZona" HeaderText="Zona" />
@@ -45,7 +45,7 @@
             </Columns>
         </asp:GridView>
         <br />
-        <asp:Button ID="btnListarS" runat="server" Text="Listar Sesiones" />
+        <asp:Button ID="btnListarS" runat="server" Text="Listar Sesiones" OnClick="btnListarS_Click" />
     </div>
 
          

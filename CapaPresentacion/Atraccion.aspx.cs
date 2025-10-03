@@ -29,7 +29,7 @@ namespace CapaPresentacion
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            atraccion.Actualizar(int.Parse(txtCodigoAtraccion.Text), txtNombreAtraccion.Text, int.Parse(txtPrecioEntrada.Text), txtCapacidadMaxima.Text);
+            atraccion.Actualizar(int.Parse(txtCodigoActualizar.Text), txtNuevoNombre.Text, int.Parse(txtNuevoPrecio.Text), txtNuevaCapacidad.Text);
         }
 
         protected void btnBuscarAtraccion_Click1(object sender, EventArgs e)

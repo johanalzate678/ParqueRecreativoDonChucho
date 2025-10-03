@@ -87,10 +87,5 @@
         <asp:Button ID="btnListarAtracciones" runat="server" Text="Listar Todas" OnClick="btnListarAtracciones_Click"  />
     </div>
 
-         
-         
         
-       
-         
-
  </asp:Content>
